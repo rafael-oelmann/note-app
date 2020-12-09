@@ -9,14 +9,16 @@ class NoteListView {
   display() {
     var returnString = ""
 
-    for(var i = 0; i < this.list.list.length; i++) {
+    this.list.list.forEach( (note) => {
 
-      returnString = returnString + '<li><div>' + this.list.list[i].getText() + '</div></li>'
+      returnString = returnString + '<li><div>' + note.getText() + '</div></li>'
 
-    }
-    returnString = '<ul>' + returnString + '</ul>'
+    }); 
+
+    returnString = '<ul>' +returnString + '</ul>'
     return returnString
 
   }
 
 }
+
